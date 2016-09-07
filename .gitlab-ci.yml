@@ -21,8 +21,8 @@ cache:
     - target/
     # cache downloaded artifacts stored in maven local repos
     - ./.m2/repository
-  # keep cache accross stages
-  key: "$CI_BUILD_REPO"
+  # keep cache across stages
+  key: "$CI_PIPELINE_ID"
 
 
 package:
