@@ -10,5 +10,24 @@ variables:
   # `installAtEnd` and `deployAtEnd`are only effective with recent version of the corresponding plugins.
   MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end --show-version -DinstallAtEnd=true -DdeployAtEnd=true"
 
+stages:
+  - build
+  - test
+
+cache:
+  paths:
+    # cache maven's target folder
+    - target/
+    # cache downloaded artifacts stored in maven local repos
+    - /root/.m2
+  # keep cache accross stages
+  key: "$CI_BUILD_REPO"
+
+
 package:
+  stage: build
   script: "mvn package $MAVEN_CLI_OPTS"
+
+test:
+  stage: test
+  script: "mvn test $MAVEN_CLI_OPTS"
