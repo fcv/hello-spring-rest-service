@@ -1,6 +1,6 @@
 ## About
 
-Spring RESTful Web Service Hello World project based on Spring's ["Building a RESTful Web Service"](https://spring.io/guides/gs/rest-service/) getting started guide.
+Spring RESTful Web Service Hello World project based on Spring's ["Building a RESTful Web Service"](https://spring.io/guides/gs/rest-service/) and ["Building a Hypermedia-Driven RESTful Web Service"](https://spring.io/guides/gs/rest-hateoas/) getting started guides.
 
 ## Build
 
